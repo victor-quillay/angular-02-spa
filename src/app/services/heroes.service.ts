@@ -61,9 +61,12 @@ export class HeroesService {
         console.log('Servicio Listo para usar!!');
     }
 
-    // tslint:disable-next-line:typedef
     getHeroes(): Heroe[]{
         return this.heroes;
+    }
+
+    getHeroe(i: number){
+      return this.heroes[i];
     }
 
 }

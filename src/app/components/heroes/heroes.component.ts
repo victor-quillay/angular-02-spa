@@ -17,15 +17,13 @@ export class HeroesComponent implements OnInit {
     console.log('constructor');
   }
 
-  // tslint:disable-next-line:typedef
-  ngOnInit() {
+  ngOnInit(): void {
     console.log('ngOnInit');
     this.heroes = this.heroesService.getHeroes();
     console.log(this.heroes);
   }
 
-  // tslint:disable-next-line:typedef
-  verHeroe(i: number){
+  verHeroe(i: number): void{
     this.router.navigate(['/heroe', i]);
   }
 
