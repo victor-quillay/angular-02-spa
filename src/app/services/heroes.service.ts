@@ -69,6 +69,19 @@ export class HeroesService {
       return this.heroes[i];
     }
 
+    buscarHeroes(params: string){
+
+      const heroesArr: Heroe[] = [];
+      params = params.toLowerCase();
+      for (const heroe of this.heroes) {
+        const nombre = heroe.nombre.toLowerCase();
+        if (nombre.indexOf(params) >= 0){
+          heroesArr.push(heroe);
+        }
+      }
+      return heroesArr;
+    }
+
 }
 
 export interface Heroe {
